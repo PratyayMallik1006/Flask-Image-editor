@@ -1,0 +1,100 @@
+
+  {% extends 'base.html' %}
+  {% block title %}Resize{% endblock title %}
+  {% block body %}
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row">
+        <form action="/resize" method="post" class="col s12" enctype="multipart/form-data">
+          <div class="row">
+
+            <div class="input-field col s5" style="margin-left: 20px; margin-top: 50px">
+              <div class = "row">
+
+                  <div class="row">
+                    <label for="first_name"><b>Upload Image to resize</b></label><br>
+                    <div class = "file-field input-field">
+                      <div>
+                        <span>Browse</span>
+                        <input class = "btn form-control" type = "file" name="image_upload" id="image_upload" />
+                      </div>
+                      <div class = "file-path-wrapper">
+                        <!-- <input class = "file-path validate" type = "text" placeholder = "Upload Image" name="image_name" id="image_name" /> -->
+                      </div>
+                    </div>                    
+                  </div>
+                  
+                  <div class="row" id="imagebox">
+                    
+                    <div class = "file-field input-field">
+                      
+                        <span>width</span>
+                        <input class="form-control" type="number" name="width" id="" value="500"> <br>
+                        <span>Height</span>
+                        <input class="form-control" type="number" name="height" id="" value="300">
+                        
+                      </div>
+      
+
+                 
+
+                  
+        
+                  <div class="row center" style="margin-top: 50px">
+                    <button id="submit" type="submit" class="btn btn-primary btn-lg">Check</button>
+                  </div>
+
+              </div>
+            </div>
+         
+            
+            </div>
+            <div class="input-field col s3">
+              <div style="text-align: center; padding-top: 50px; margin-left: 100px">
+                <img src="{{ full_filename }}" alt="image">
+              </div>
+         
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  {% endblock body %}
+
+<!--   
+  <script src="./static/js/materialize.js"></script>
+  <script type="text/javascript">
+    var imagebox = document.getElementById('imagebox');
+    var textbox = document.getElementById('textboxes');
+    
+
+    textbox.style.display = "none";
+    document.getElementById('image_upload').onchange = function () {
+        document.getElementById('image_name').value = this.value.slice(12,100);
+    };
+    document.getElementById('logo_upload').onchange = function () {
+        document.getElementById('logo_name').value = this.value.slice(12,100);
+    };
+
+    document.getElementById('radiofield').onchange = function () {
+      if(document.getElementById('logo_watermark').checked) {
+        textbox.style.display = "none";
+        imagebox.style.display = "block";
+      }else if(document.getElementById('text_watermark').checked) {
+        textbox.style.display = "block";
+        imagebox.style.display = "none";
+      }
+    }; 
+
+
+  </script>
+
+  </body>
+</html>
+-->
+

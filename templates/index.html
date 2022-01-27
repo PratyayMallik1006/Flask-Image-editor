@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Online Image Editor</h1>
+        <p class="lead text-muted">Edit you images online.</p>
+        
+      </div>
+    </div>
+  </section>
+<section class="option" style="padding: 0 100px; text-align: center;">
+<div class="row">
+<div class="col-lg-4 col-md-6 col-sm-12 news-col">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3>Resize</h3>
+        <img src="{{ url_for('static', filename='images/resize.png') }}" style="width: 100px" alt="image">
+      </div>
+      <div class="card-body">
+        <h2>Resize</h2>
+        <p>Resize your image. </p>
+        <a href=resize>
+        <button class="btn btn-lg btn-block btn-dark" type="button">Resize</button>
+        </a>
+      </div>
+      </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 news-col">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3>Crop</h3>
+        <img src="{{ url_for('static', filename='images/crop.png') }}" style="width: 100px;" alt="image">
+      </div>
+      <div class="card-body">
+        <h2>Crop</h2>
+        <p>Crop your image. </p>
+        <a href=crop>
+        <button class="btn btn-lg btn-block btn-dark" type="button">Crop</button>
+        </a>
+      </div>
+      </div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 news-col">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3>Watermark</h3>
+        <img src="{{ url_for('static', filename='images/watermark.png') }}" style="width: 100px;" alt="image">
+      </div>
+      <div class="card-body">
+        <h2>Watermark</h2>
+        <p>Watermark your image. </p>
+        <a href=watermark>
+        <button class="btn btn-lg btn-block btn-dark" type="button">Watermark</button>
+        </a>
+      </div>
+      </div>
+</div>
+</div>
+</section>
+<br><br><hr>
+<a href=resize>
+<button class="btn btn-primary btn-lg">resize image</button>
+</a>
+<a href=crop>
+<button class="btn btn-primary btn-lg">crop image</button>
+</a>
+    
+{% endblock body %}
